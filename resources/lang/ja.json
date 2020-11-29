@@ -1,0 +1,13 @@
+{
+    "Login":"ログイン",
+    "UserName":"ユーザーID",
+    "Password":"パスワード",
+    "Remember Me":"ログイン状態を保存する",
+    "Forgot Your Password?":"パスワードをお忘れですか ?",
+    "Register":"新規登録",
+    "Name":"お名前",
+    "Confirm Password":"パスワード(確認用)",
+    "Logout":"ログアウト",
+    "comment":"コメント",
+    "comment_guest":"コメントを投稿するにはログインが必要です。"
+}

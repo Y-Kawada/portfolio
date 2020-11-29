@@ -1,0 +1,12 @@
+.fold_label {
+    display: block;
+}
+.fold {
+    display: none;
+}
+.fold_contents {
+    display: none;
+}
+.fold:checked + .fold_contents {
+    display:block;
+}

@@ -1,0 +1,13 @@
+{
+    "Login":"Login",
+    "UserName":"UserID",
+    "Password":"Password",
+    "Remember Me":"Remember Me",
+    "Forgot Your Password?":"Forgot Your Password?",
+    "Register":"Register",
+    "Name":"Name",
+    "Confirm Password":"Confirm Password",
+    "Logout":"Logout",
+    "comment":"comment",
+    "comment_guest":"You must login to comment."
+}
