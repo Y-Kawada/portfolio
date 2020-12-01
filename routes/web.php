@@ -22,5 +22,5 @@ Route::get('/welcome', function () {
 Auth::routes();
 
 Route::get('/', [TimelineController::class, 'showTimelinePage'])->name("timeline");
-Route::post('/', [TimelineController::class, 'postTweet'])->name('timeline.tweet');
+Route::post('/tweet', [TimelineController::class, 'postTweet'])->name('timeline.tweet');
 Route::post('/comment', [TimelineController::class, 'postComment'])->name('timeline.comment');
