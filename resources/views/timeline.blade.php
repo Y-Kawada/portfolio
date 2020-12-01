@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mt-3">
-        {!! Form::open(['route' => 'timeline', 'method' => 'POST']) !!}
+        {!! Form::open(['route' => 'timeline.tweet', 'method' => 'POST']) !!}
             {{ csrf_field() }}
             <div class="row mb-4">
                 @auth
