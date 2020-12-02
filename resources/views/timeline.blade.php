@@ -6,7 +6,7 @@
             {{ csrf_field() }}
             <div class="row mb-4">
                 @auth
-                    {{ Form::text('tweet', null, ['class' => 'form-control col-9 mr-auto']) }}
+                    {{ Form::textarea('tweet', null, ['class' => 'form-control col-9 mr-auto', 'rows' => 3]) }}
                     {{ Form::submit('ツイート', ['class' => 'btn btn-primary col-2']) }}
                 @endauth
             </div>
@@ -26,7 +26,7 @@
                     <strong>{{ $tweet->name}}</strong> {{ $tweet->created_at}}
                 </div>
                 <div>
-                    {{$tweet->tweet}}
+                    {!! nl2br($tweet->tweet) !!}
                 </div>
                 <label for="label{{$tweet->id}}" class="fold_label text-primary">コメント</label>
                 <input type="checkbox" id="label{{$tweet->id}}" class="fold" />
@@ -37,7 +37,7 @@
                                 <strong>{{ $comment->user->name}}</strong> {{ $comment->created_at}}
                             </div>
                             <div class="pl-3">
-                                {{$comment->comment}}
+                                {!! nl2br($comment->comment) !!}
                             </div>
                         </div>
                     @endforeach
@@ -45,7 +45,7 @@
                         {!! Form::open(['route' => 'timeline.comment', 'method' => 'POST']) !!}
                             <div class="row mb-4">
                                 {{ Form::hidden('tweet_id', $tweet->id)}}
-                                {{ Form::text('comment', null, ['class' => 'form-control col-6 mr-1']) }}
+                                {{ Form::textarea('comment', null, ['class' => 'form-control col-6 mr-1', 'rows' => 3]) }}
                                 {{ Form::submit(__('comment'), ['class' => 'btn btn-primary col-2']) }}
                             </div>
                         {!! Form::close() !!}
