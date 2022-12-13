@@ -1,0 +1,242 @@
+.moveMenuIcon {
+    display: none;
+}
+
+.openMenu {
+    display: none;
+}
+
+.openSubMenu {
+    display: none;
+}
+
+.menuIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: fixed;
+    z-index: 11;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+
+.spinner {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+.moveMenuIcon:checked ~ .menuIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+.moveMenuIcon:checked ~ .menuIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+.moveMenuIcon:checked ~ .menuIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+#Menu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 200px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background-color: #c51f1a;
+    z-index: 10 ;
+}
+
+.openMenu:checked ~ #Menu {
+    transform: translateX(0);
+}
+
+.openMenu:checked ~ main {
+    margin-left: 200px;
+}
+
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.MenuIsidebarMenuInnernner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebarMenuInner li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sidebarMenuInner li a:hover,
+.sidebarMenuInner li a:focus,
+.sidebarMenuInner .openSubMenuLabel:hover {
+  color: #d39593;
+}
+
+.openSubMenuLabel{
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.subMenuInner{
+    display: none;
+}
+
+.openSubMenu:checked ~ ul {
+    display: block;
+}
+
+.subMenu:has(.openSubMenu:checked) {
+   padding-bottom: 0;
+}
+
+.subMenuInner {
+    padding: 0;
+}
+
+.subMenuInner li{
+    font-size: 0.8rem;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    border-bottom: none;
+}
+
+
+/* 掲示板ページ用 */
+.navbar-timeline {
+    top: 60px;
+    width: 200px;
+    right: 0;
+    display: flex;
+}
+
+
+/* プロフィールページ用 */
+
+.profileContent {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.profileTitle {
+    color: #c51f1a;
+    margin: 5px;
+}
+
+.profileDetailTitle {
+    color: palevioletred;
+}
+
+.profileDetailWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.profileDetail {
+    width: 49%;
+    margin-bottom: 10px;
+    padding: 5px;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.programmingItem {
+    /* list-style: none; */
+    font-size: 1rem;
+}
+
+/* 星評価用 */
+
+.star5RatingTitle {
+    display: inline-block;
+    width: 15em;
+}
+
+.star5Rating{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    white-space: nowrap;
+    color: #CCCCCC; /* グレーカラー 自由に設定化 */
+    /*font-size: 30px; フォントサイズ 自由に設定化 */
+}
+
+.star5Rating:before, .star5Rating:after{
+    content: '★★★★★';
+}
+
+.star5Rating:after{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #ffcf32; /* イエローカラー 自由に設定化 */
+}
+
+.star5Rating[data-rate="5"]:after{ width: 100%; } /* 星5 */
+.star5Rating[data-rate="4.5"]:after{ width: 90%; } /* 星4.5 */
+.star5Rating[data-rate="4"]:after{ width: 80%; } /* 星4 */
+.star5Rating[data-rate="3.5"]:after{ width: 70%; } /* 星3.5 */
+.star5Rating[data-rate="3"]:after{ width: 60%; } /* 星3 */
+.star5Rating[data-rate="2.5"]:after{ width: 50%; } /* 星2.5 */
+.star5Rating[data-rate="2"]:after{ width: 40%; } /* 星2 */
+.star5Rating[data-rate="1.5"]:after{ width: 30%; } /* 星1.5 */
+.star5Rating[data-rate="1"]:after{ width: 20%; } /* 星1 */
+.star5Rating[data-rate="0.5"]:after{ width: 10%; } /* 星0.5 */
+.star5Rating[data-rate="0"]:after{ width: 0%; } /* 星0 */

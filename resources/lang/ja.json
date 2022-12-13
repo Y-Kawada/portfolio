@@ -9,5 +9,7 @@
     "Confirm Password":"パスワード(確認用)",
     "Logout":"ログアウト",
     "comment":"コメント",
-    "comment_guest":"コメントを投稿するにはログインが必要です。"
+    "comment_guest":"コメントを投稿するにはログインが必要です。",
+    "notification":"お知らせ",
+    "timeline":"掲示板"
 }

@@ -9,5 +9,7 @@
     "Confirm Password":"Confirm Password",
     "Logout":"Logout",
     "comment":"comment",
-    "comment_guest":"You must login to comment."
+    "comment_guest":"You must login to comment.",
+    "notification":"Notifications",
+    "timeline":"Timeline"
 }

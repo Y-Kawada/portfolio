@@ -11,6 +11,17 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- じゃんけん用 -->
+    <script src="{{ asset('js/janken.js') }}" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("moveMenuIcon").addEventListener("change", () => {
+                document.getElementById("openMenu").checked = document.getElementById("moveMenuIcon").checked;
+            });
+        });
+    </script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -19,14 +30,21 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/fold.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('img/favicon.ico') }}" rel="icon">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
+                <input type="checkbox" class="moveMenuIcon" id="moveMenuIcon">
+                <label for="moveMenuIcon" class="menuIconToggle">
+                    <div class="spinner diagonal part-1"></div>
+                    <div class="spinner horizontal"></div>
+                    <div class="spinner diagonal part-2"></div>
+                </label>
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src={{ asset('img/gun_white.png') }}>
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Portfolio') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -40,48 +58,33 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
+                        
                     </ul>
                 </div>
             </div>
         </nav>
 
+        <input type="checkbox" class="openMenu" id="openMenu">
+        <div id="Menu">
+            <div id="sidebarMenu">
+                <ul class="sidebarMenuInner">
+                    <li><a href="/">{{__('プロフィール')}}</a></li>
+                    <li class="subMenu"><label for="openSubMenu" class="openSubMenuLabel">{{__('作品')}}　▼</label>
+                        <input type="checkbox" class="openSubMenu" id="openSubMenu">
+                        <ul class="subMenuInner">
+                            <li><a href="/timeline">{{__('timeline')}}</a></li>
+                            <li><a href="/janken">{{__('じゃんけん')}}</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <main class="py-4">
             @yield('content')
         </main>
         <footer>
-            <p>※サバゲーに関係のない投稿、不適切な投稿は適宜削除させていただきます。</p>
+            <p>Copyright ©️ 2022 Yuka.K</p>
         </footer>
     </div>
 </body>
