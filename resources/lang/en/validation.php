@@ -151,6 +151,8 @@ return [
     'attributes' => [
         'username' => 'UserID',
         'tweet' => 'tweet',
+        'email' => 'email address',
+        'contactDetail' => 'inquiry details',
     ],
 
 ];

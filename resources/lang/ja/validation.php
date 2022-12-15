@@ -151,5 +151,7 @@ return [
         'username' => 'ユーザーID',
         'password' => 'パスワード',
         'tweet' => 'ツイート',
+        'email' => 'メールアドレス',
+        'contactDetail' => 'お問合せ内容',
     ],
 ];
