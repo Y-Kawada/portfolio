@@ -77,16 +77,16 @@
         <h3 class="profileTitle">Skill</h3>
         <ul class="profileDetailWrapper">
             <li class="profileDetail">
-                <h5 class="profileDetailTitle">言語</h5>
+                <h5 class="profileDetailTitle">■言語</h5>
                 <ul>
                     <li class="programmingItem"><span class="star5RatingTitle">PHP</span><span class="star5Rating" data-rate="0"></span></li>
                     <li class="programmingItem"><span class="star5RatingTitle">Java</span><span class="star5Rating" data-rate="0.5"></span></li>
-                    <li class="programmingItem"><span class="star5RatingTitle">HTML</span><span class="star5Rating" data-rate="4"></span></li>
+                    <li class="programmingItem"><span class="star5RatingTitle">HTML/CSS</span><span class="star5Rating" data-rate="4"></span></li>
                     <li class="programmingItem"><span class="star5RatingTitle">JavaScript</span><span class="star5Rating" data-rate="4"></span></li>
                 </ul>
             </li>
             <li class="profileDetail">
-                <h5 class="profileDetailTitle">フレームワーク・DB</h5>
+                <h5 class="profileDetailTitle">■フレームワーク・DB</h5>
                 <ul>
                     <li class="programmingItem"><span class="star5RatingTitle">Laravel</span><span class="star5Rating" data-rate="4"></span></li>
                     <li class="programmingItem"><span class="star5RatingTitle">SpringBoot</span><span class="star5Rating" data-rate="4"></span></li>
