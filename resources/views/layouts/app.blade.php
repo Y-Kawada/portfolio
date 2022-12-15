@@ -81,7 +81,9 @@
         </div>
 
         <main class="py-4">
-            @yield('content')
+            <div class="container mt-3">
+                @yield('content')
+            </div>
         </main>
         <footer>
             <p>Copyright ©️ 2022 Yuka.K</p>
