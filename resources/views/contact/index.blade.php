@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h3>お問合せフォーム</h3>
+<h3 class="border-bottom">お問合せフォーム</h3>
 <form method="POST" action="{{ route('contact.confirm') }}">
     @csrf
     <label for="email">メールアドレス<input id="email" type="text" name="email" value="{{ old('email') }}"></label>

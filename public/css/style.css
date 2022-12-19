@@ -1,3 +1,18 @@
+button {
+    background-color: #c51f1a;
+    color: white;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.error-message {
+    color: red;
+}
+
 .moveMenuIcon {
     display: none;
 }

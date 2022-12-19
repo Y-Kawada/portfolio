@@ -3,7 +3,8 @@
 @section('content')
     <div class="profileContent">
         <h3 class="profileTitle">Profile</h3>
-        <p>2000年生まれ、埼玉県出身。独学でJavaを学習後、エンジニアとして就職。</p>
+        <p>2000年生まれ、埼玉県出身。独学でJavaを学習後、エンジニアとして就職。<br>
+            <a href="https://github.com/Y-Kawada">GitHub</a></p>
     </div>
 
     <div class="profileContent">
