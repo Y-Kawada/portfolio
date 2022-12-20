@@ -74,6 +74,8 @@
                         <ul class="subMenuInner">
                             <li><a href="/timeline">{{__('timeline')}}</a></li>
                             <li><a href="/janken">{{__('じゃんけん')}}</a></li>
+                            <li><a href="/contact">{{__('お問合せ')}}</a></li>
+                            <li><a href="https://github.com/Y-Kawada">{{__('GitHub')}}</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -3,8 +3,7 @@
 @section('content')
     <div class="profileContent">
         <h3 class="profileTitle">Profile</h3>
-        <p>2000年生まれ、埼玉県出身。独学でJavaを学習後、エンジニアとして就職。<br>
-            <a href="https://github.com/Y-Kawada">GitHub</a></p>
+        <p>2000年生まれ、埼玉県出身。独学でJavaを学習後、エンジニアとして就職。</p>
     </div>
 
     <div class="profileContent">
@@ -22,7 +21,7 @@
                     【システム概要】<br>
                     使用言語:PHP,JavaScript,HTML<br>
                     DB:MySQL<br>
-                    OS:windows<br>
+                    OS:Windows<br>
                     FW:Laravel,React
                 </p>
             </li>
@@ -37,7 +36,7 @@
                     【システム概要】<br>
                     使用言語:PHP,JavaScript<br>
                     DB:MySQL<br>
-                    OS:windows<br>
+                    OS:Windows<br>
                     FW:CakePHP
                 </p>
             </li>
@@ -53,8 +52,8 @@
                     【システム概要】<br>
                     使用言語:Java,JavaScript,HTML<br>
                     DB:MySQL<br>
-                    OS:windows<br>
-                    FW:SpringBoot,Jquery,BootStrap
+                    OS:Windows<br>
+                    FW:SpringBoot,JQuery,BootStrap
                 </p>
             </li>
             <li class="profileDetail">
@@ -84,6 +83,7 @@
                     <li class="programmingItem"><span class="star5RatingTitle">Java</span><span class="star5Rating" data-rate="0.5"></span></li>
                     <li class="programmingItem"><span class="star5RatingTitle">HTML/CSS</span><span class="star5Rating" data-rate="4"></span></li>
                     <li class="programmingItem"><span class="star5RatingTitle">JavaScript</span><span class="star5Rating" data-rate="4"></span></li>
+                    <li class="programmingItem"><span class="star5RatingTitle">Ruby</span><span class="star5Rating" data-rate="4"></span></li>
                 </ul>
             </li>
             <li class="profileDetail">
@@ -92,6 +92,7 @@
                     <li class="programmingItem"><span class="star5RatingTitle">Laravel</span><span class="star5Rating" data-rate="4"></span></li>
                     <li class="programmingItem"><span class="star5RatingTitle">SpringBoot</span><span class="star5Rating" data-rate="4"></span></li>
                     <li class="programmingItem"><span class="star5RatingTitle">BootStrap</span><span class="star5Rating" data-rate="4"></span></li>
+                    <li class="programmingItem"><span class="star5RatingTitle">JQuery</span><span class="star5Rating" data-rate="4"></span></li>
                     <li class="programmingItem"><span class="star5RatingTitle">MySQL</span><span class="star5Rating" data-rate="4"></span></li>
                 </ul>
             </li>
